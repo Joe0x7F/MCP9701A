@@ -34,7 +34,7 @@ Vout ~= 0.871 Volts
 
 # Limitations to the characteristic equation
 
-Besides the limitations listed in the datasheet [link text](20001942G.pdf "(20001942G.pdf)"), below are the ranges used in my tests to derive the characteristic equation shown above.  I anticipate adding wider temperature ranges to my tests as time and ambient temperatures permit which in turn will produce tweaks to the characteristic equation. However, I expect the characteristic equation above to be good for any situations "near" the ranges listed below.
+Besides the limitations listed in the datasheet [link text](20001942G.pdf "20001942G.pdf"), below are the ranges used in my tests to derive the characteristic equation shown above.  I anticipate adding wider temperature ranges to my tests as time and ambient temperatures permit which in turn will produce tweaks to the characteristic equation. However, I expect the characteristic equation above to be good for any situations "near" the ranges listed below.
 
 I used 9 different MCP9701As to acquire the data.
 
