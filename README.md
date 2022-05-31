@@ -17,6 +17,8 @@ The characteristic equation below should make it easy for you to design your own
 
 Vout = 0.010794909077825357 * TemperatureInFahrenheit + 0.003601552216090184 * VDD + 0.000022013009740013396 * RL + 0.02551266767780824
 
+The coefficient of determination (r-squared) for this equation is 0.9941778756953391.
+
 ***NOTE: RL must be in K ohms.***
 
 
@@ -27,12 +29,18 @@ Vout = 0.010794909077825357 * (77.0) + 0.003601552216090184 * (3.30) + 0.0000220
 
 Vout ~= 0.871 Volts
 
+
+
+
 # Limitations to the characteristic equation
 
-Besides the limitations listed in the datasheet (20001942G.pdf), these are the ranges used in my tests to uncover the sharacteristic equation shown above.  I expect to add wider temperature ranges to my tests as time and ambient temperatures permit. However, I expect the characteristic equation above to be good for any sitautions "near" thesranges listed below also.
+Besides the limitations listed in the datasheet (20001942G.pdf), below are the ranges used in my tests to derive the characteristic equation shown above.  I anticipate adding wider temperature ranges to my tests as time and ambient temperatures permit which in turn will produce tweaks to the characteristic equation. However, I expect the characteristic equation above to be good for any situations "near" the ranges listed below.
 
+I used 9 different MCP9701As to acquire the data.
 
-
+76.8 degrees Fahrenheit <= Ambient Temperature <= 89.2 degrees Fahrenheit
+3.128 Vdc <= VDD <= 5.260 Vdc
+21.51K Ohm <= RL <= 221.6K Ohm
 
 
 # Warning
