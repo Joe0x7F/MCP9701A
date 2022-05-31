@@ -1,9 +1,11 @@
 # MCP9701A
  The MCP9701A is an analog temperature sensor that converts temperature to analog voltage.
 
+Here is the datasheet for this device: https://ww1.microchip.com/downloads/en/DeviceDoc/20001942G.pdf
+
 This project was created to help enigneers, technicians, and hobbyist quicky get the MCP9701A low voltage temperature sensor working in their own projects.
 
-The characteristic equation given below should make it easy for you to design your own circuits around this device.
+The characteristic equation below should make it easy for you to design your own circuits around this device.
 
 
 # Basic circuit used to test and gather characteristic data
@@ -25,10 +27,13 @@ Vout = 0.010794909077825357 * (77.0) + 0.003601552216090184 * (3.30) + 0.0000220
 
 Vout ~= 0.871 Volts
 
+# Limitations to the characteristic equation
+
+
 
 
 # Warning
 
-The TMP35/TMP36/TMP37 is an unpredictable prooduct. I recommend against ever using it.
+The TMP35/TMP36/TMP37 is an unpredictable product. I recommend against ever using it.
 
 See https://github.com/Joe0x7F/TMP36.
