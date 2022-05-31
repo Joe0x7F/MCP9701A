@@ -18,6 +18,8 @@ This project was created to help enigneers, technicians, and hobbyist quicky get
 
 The TMP35/TMP36/TMP37 is an unpredictable prooduct. I recommend against ever using it.
 
+See https://github.com/Joe0x7F/TMP36.
+
 
 
 
