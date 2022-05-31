@@ -36,14 +36,13 @@ Vout ~ 0.871 Volts
 
 Besides the limitations listed in the [datasheet](20001942G.pdf "20001942G.pdf"), below are the ranges used in my tests to derive the characteristic equation shown above.  I anticipate adding wider temperature ranges to my tests as time and ambient temperatures permit which in turn will produce tweaks to the characteristic equation. However, I expect the characteristic equation above to be good for any situations "near" the ranges listed below.
 
-I used 9 different MCP9701As to acquire the data.
-
 76.8 degrees Fahrenheit <= Ambient Temperature <= 89.2 degrees Fahrenheit <br />
 AND <br />
 3.128 Vdc <= VDD <= 5.260 Vdc <br />
 AND <br />
 21.51K Ohm <= RL <= 221.6K Ohm
 
+I used 9 different MCP9701As to acquire the data.
 
 # Warning
 
