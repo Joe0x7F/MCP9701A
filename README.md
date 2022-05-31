@@ -38,10 +38,10 @@ Besides the limitations listed in the [datasheet](20001942G.pdf "20001942G.pdf")
 
 I used 9 different MCP9701As to acquire the data.
 
-76.8 degrees Fahrenheit <= Ambient Temperature <= 89.2 degrees Fahrenheit
-AND
-3.128 Vdc <= VDD <= 5.260 Vdc
-AND
+76.8 degrees Fahrenheit <= Ambient Temperature <= 89.2 degrees Fahrenheit <br />
+AND <br />
+3.128 Vdc <= VDD <= 5.260 Vdc <br />
+AND <br />
 21.51K Ohm <= RL <= 221.6K Ohm
 
 
