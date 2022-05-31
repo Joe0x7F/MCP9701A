@@ -3,6 +3,8 @@
 
 This project was created to help enigneers, technicians, and hobbyist quicky get the MCP9701A low voltage temperature sensor working in their own projects.
 
+The characteristic equation given below should make it easy for you to design your own circuits around this device.
+
 
 # Basic circuit used to test and gather characteristic data
 
@@ -30,8 +32,3 @@ Vout ~= 0.871 Volts
 The TMP35/TMP36/TMP37 is an unpredictable prooduct. I recommend against ever using it.
 
 See https://github.com/Joe0x7F/TMP36.
-
-
-
-
-
