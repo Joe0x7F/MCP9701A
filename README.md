@@ -21,7 +21,7 @@ The coefficient of determination (r-squared) for this equation is 0.995200173281
 
 **NOTE: RL must be entered into the characteristic equation in K ohms.**
 
-So, for example, if VDD is 3.30 Vdc, the ambient temperature is 77.0 degrees Fahrenheit, and RL (your equivalent load resistance) is 100K Ohms, then you would expect Vout to be approximately: 0.872 Volts
+So, for example, if VDD is 3.30 Vdc, the ambient temperature is 77.0 degrees Fahrenheit, and RL (your equivalent load resistance) is 100K Ohms, then you would expect Vout to be approximately 0.872 Volts.
 
 Vout = 0.010664993427881799 * (77.0) + 0.003439744213177644 * (3.30) + 0.000021753013902669428 * (100) + 0.036892333737057255 = 0.871623284977708946
 
