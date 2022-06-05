@@ -30,7 +30,7 @@ Vout ~ 0.872 Volts
 
 
 
-# Limitations to the characteristic equation
+# Limitations of the characteristic equation
 
 Besides the limitations listed in the [manufacturer's datasheet](20001942G.pdf "20001942G.pdf"), below are the ranges used in my tests to derive the characteristic equation shown above.  I anticipate adding wider temperature ranges to my tests as time and ambient temperatures permit which in turn will produce tweaks to the characteristic equation. However, I expect the characteristic equation above to be good for any situation in or "near" the domain criterion listed below.
 
