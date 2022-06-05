@@ -5,7 +5,7 @@ Here is the datasheet for this device: https://ww1.microchip.com/downloads/en/De
 
 This project was created to help enigneers, technicians, and hobbyist quicky get the MCP9701A low voltage temperature sensor working in their own projects.
 
-The characteristic equation below should make it easy for you to design your own circuits around this device.
+**The characteristic equation below should make it easy for you to design your own circuits around this device.**
 
 
 # Basic circuit used to test and gather characteristic data
