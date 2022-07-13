@@ -8,12 +8,12 @@ This project was created to help enigneers, technicians, and hobbyist quicky get
 **The characteristic equation below should make it easy for you to design your own circuits around this device.**
 
 
-# Basic circuit used to test and gather characteristic data
+# Basic circuit used to test and gather characteristic data:
 
 ![Simple Circuit](<SimpleCircuit.png>)
 
 
-# Characteristic equation
+# Characteristic equation:
 
 **Vout = 0.010664993427881799 * TemperatureInFahrenheit + 0.003439744213177644 * VDD + 0.000021753013902669428 * RL + 0.036892333737057255**
 
@@ -30,7 +30,7 @@ Vout ~ 0.872 Volts
 
 
 
-# Limitations of the characteristic equation
+# Limitations of the characteristic equation:
 
 Besides the limitations listed in the [manufacturer's datasheet](20001942G.pdf "20001942G.pdf"), below are the ranges used in my tests to derive the characteristic equation shown above.  I anticipate adding wider temperature ranges to my tests as time and ambient temperatures permit which in turn will produce tweaks to the characteristic equation. However, I expect the characteristic equation above to be good for any situation in or "near" the domain criterion listed below.
 
@@ -42,11 +42,11 @@ AND <br />
 
 I used 9 different MCP9701As to acquire the data. 102 different data points were used to determine the characteristic equation.
 
-# Another good Temperature sensor
+# Another good Temperature sensor:
 
 https://github.com/Joe0x7F/LMT87
 
-# Warning
+# Warning:
 
 The TMP35/TMP36/TMP37 is an unpredictable product. I recommend against ever using it.
 
