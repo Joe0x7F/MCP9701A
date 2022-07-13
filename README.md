@@ -42,6 +42,10 @@ AND <br />
 
 I used 9 different MCP9701As to acquire the data. 102 different data points were used to determine the characteristic equation.
 
+# Another good Temperature sensor
+
+https://github.com/Joe0x7F/LMT87
+
 # Warning
 
 The TMP35/TMP36/TMP37 is an unpredictable product. I recommend against ever using it.
