@@ -164,7 +164,7 @@ The two MCP9701ALPG characteristic equations above get closest to the values in 
 
 # Another good analog temperature sensor:
 
-https://github.com/Joe0x7F/MCP9701A
+https://github.com/Joe0x7F/LMT87
 
 # Warning:
 
