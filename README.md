@@ -34,7 +34,7 @@ The coefficient of determination (r-squared) for this Characteristic Equation 1 
 
 **NOTE 2: Regarding these characteristic equations and the schematic above, I am defining Iout to be postiive (+) when Iout is flowing out of the MCP9701A (sourcing current) , and I am defining Iout to be negative (-) when Iout is flowing into the MCP9701A (sinking current).**
 
-**NOTE 3: From the manufacturer's datasheet, Iout must be:  -50uA <= Iout <= 50uA  for normal temperature sensing operation.**
+**NOTE 3: From the manufacturer's datasheet, Iout must be:  -100uA <= Iout <= 100uA  for normal temperature sensing operation.**
 
 
 Example 1a:
@@ -87,7 +87,7 @@ The coefficient of determination (r-squared) for Characteristic Equation 2 is 0.
 
 **NOTE 2: Regarding these characteristic equations and the schematic above, I am defining Iout to be postiive (+) when Iout is flowing out of the MCP9701A (sourcing current) , and I am defining Iout to be negative (-) when Iout is flowing into the MCP9701A (sinking current).**
 
-**NOTE 3: From the manufacturer's datasheet, Iout must be:  -50uA <= Iout <= 50uA  for normal temperature sensing operation.**
+**NOTE 3: From the manufacturer's datasheet, Iout must be:  -100uA <= Iout <= 100uA  for normal temperature sensing operation.**
 
 
 Example 2a:
