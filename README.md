@@ -1,29 +1,29 @@
-# LMT87
-The LMT87 device is a precision CMOS analog temperature sensor with a linear output voltage that is inversely proportional to temperature. "A push-pull output gives the LMT87 the ability to sink and source significant current."
+# MCP9701A
+The MCP9701A is an analog temperature sensor that converts temperature to analog voltage. The MCP9700/9700A and MCP9701/9701A sensors are designed to source/sink 100 µA (max.).
 
-Here is the datasheet for this device: https://www.ti.com/lit/ds/symlink/lmt87.pdf
+Here is the datasheet for this device: https://ww1.microchip.com/downloads/en/DeviceDoc/20001942G.pdf
 
                 MD5                             SHA-1
-17f1702e1056186f86021e10f9e8e44c 0d0be8f79b70a96b1b968fea38c75f04f5e643b2 LMT87.pdf
+003a8010f2c872e9da725d6c69f76897 ee33498247825d49fb32e9772598d829319a2f86 20001942G.pdf
 
 
-Main TI.com landing for LMT87: https://www.ti.com/product/LMT87
+Main Microchip.com landing for MCP9701A: https://www.microchip.com/en-us/product/MCP9701A
 
 
 
-This project was created to help enigneers, technicians, and hobbyist quicky get the LMT87 low voltage temperature sensor working in their own projects.
+This project was created to help enigneers, technicians, and hobbyist quicky get the MCP9701A low voltage temperature sensor working in their own projects.
 
 **The characteristic equations below should make it relatively easy and quick for you to design your own circuits around this device.**
 
 
 # Basic circuit used to test and gather characteristic data:
 
-![Simple Circuit](<lmt87lpg.png>)
+![Simple Circuit](<mcp9701a-e_to.png>)
 
 
 # Characteristic equations:
 
-**Characteristic Equation 1, (for 0 (uA) <= Iout <= 50 (uA)) LMT87 is sourcing current:**
+**Characteristic Equation 1, (for 0 (uA) <= Iout <= 50 (uA)) MCP9701A is sourcing current:**
 
 **Vout = -0.007779402248826279 * Temperature_In_Fahrenheit + 0.0009733172601552494 * VDD + 0.000028261925286710542 * Iout_In_uA + 2.8933598263741938**
 
@@ -32,7 +32,7 @@ The coefficient of determination (r-squared) for this Characteristic Equation 1 
 
 **NOTE 1: Iout_In_uA must be entered into the characteristic equations in uA (1 microAmp = 1x10^-06 Amps). See examples below.**
 
-**NOTE 2: Regarding these characteristic equations and the schematic above, I am defining Iout to be postiive (+) when Iout is flowing out of the LMT87 (sourcing current) , and I am defining Iout to be negative (-) when Iout is flowing into the LMT87 (sinking current).**
+**NOTE 2: Regarding these characteristic equations and the schematic above, I am defining Iout to be postiive (+) when Iout is flowing out of the MCP9701A (sourcing current) , and I am defining Iout to be negative (-) when Iout is flowing into the MCP9701A (sinking current).**
 
 **NOTE 3: From the manufacturer's datasheet, Iout must be:  -50uA <= Iout <= 50uA  for normal temperature sensing operation.**
 
@@ -54,7 +54,7 @@ Vout = -0.007779402248826279 * (77) + 0.0009733172601552494 * (4.1) + 0.00002826
 Vout ~ 2.298 Volts
 
 
-The following form below of Characteristic Equation 1 may be easier for you if you know the DC Thevenin equivalent of the circuit your LMT87 will drive:
+The following form below of Characteristic Equation 1 may be easier for you if you know the DC Thevenin equivalent of the circuit your MCP9701A will drive:
 
 Let Iout (in uA) = [(Vout - VL) / RL] * 1,000,000, then an equivalent alternative form of Characteristic Equation 1 is:
 
@@ -76,7 +76,7 @@ Vout = (-0.007779402248826279 * (77) + 0.0009733172601552494 * (4.1) - ((0.00002
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Characteristic Equation 2, (for -50 (uA) <= Iout <= 0 (uA)) LMT87 is sinking current:**
+**Characteristic Equation 2, (for -50 (uA) <= Iout <= 0 (uA)) MCP9701A is sinking current:**
 
 **Vout = -0.0075608961627175765 * Temperature_In_Fahrenheit + 0.0009416100793021476 * VDD + -0.000018778567101973768 * Iout_In_uA + 2.87419156362495**
 
@@ -85,7 +85,7 @@ The coefficient of determination (r-squared) for Characteristic Equation 2 is 0.
 
 **NOTE 1: Iout_In_uA must be entered into the characteristic equations in uA (1 microAmp = 1x10^-06 Amps).  See examples below.**
 
-**NOTE 2: Regarding these characteristic equations and the schematic above, I am defining Iout to be postiive (+) when Iout is flowing out of the LMT87 (sourcing current) , and I am defining Iout to be negative (-) when Iout is flowing into the LMT87 (sinking current).**
+**NOTE 2: Regarding these characteristic equations and the schematic above, I am defining Iout to be postiive (+) when Iout is flowing out of the MCP9701A (sourcing current) , and I am defining Iout to be negative (-) when Iout is flowing into the MCP9701A (sinking current).**
 
 **NOTE 3: From the manufacturer's datasheet, Iout must be:  -50uA <= Iout <= 50uA  for normal temperature sensing operation.**
 
@@ -107,7 +107,7 @@ Vout = -0.0075608961627175765 * (77) + 0.0009416100793021476 * (4.1) + -0.000018
 Vout ~ 2.296 Volts
 
 
-The following form below of Characteristic Equation 2 may be easier for you if you know the DC Thevenin equivalent of the circuit your LMT87 will drive:
+The following form below of Characteristic Equation 2 may be easier for you if you know the DC Thevenin equivalent of the circuit your MCP9701A will drive:
 
 Let Iout (in uA) = [(Vout - VL) / RL] * 1,000,000, then an equivalent alternative form of Characteristic Equation 1 is:
 
@@ -129,7 +129,7 @@ Vout = (-0.0075608961627175765 * (77) + 0.0009416100793021476 * (4.1) - ((-0.000
 
 # Notes and limitations of the characteristic equations:
 
-Besides the limitations listed in the [manufacturer's datasheet](lmt87.pdf "lmt87.pdf"), below are the ranges used in my tests to derive the characteristic equations shown above.  I anticipate adding wider temperature ranges to my tests as time and ambient temperatures permit which in turn will produce tweaks to the characteristic equations. However, I expect the characteristic equations above to be good for any situation in or "near" the domain criterion listed below.
+Besides the limitations listed in the [manufacturer's datasheet](MCP9701A.pdf "MCP9701A.pdf"), below are the ranges used in my tests to derive the characteristic equations shown above.  I anticipate adding wider temperature ranges to my tests as time and ambient temperatures permit which in turn will produce tweaks to the characteristic equations. However, I expect the characteristic equations above to be good for any situation in or "near" the domain criterion listed below.
 
 -49.6992481203007uA <= Iout <= 47.840462905559uA
 
@@ -141,25 +141,25 @@ AND
 
 2.703V <= Vout <= 5.5V
 
-I used 21 LMT87LPGs (TO-92S) to acquire the data. 570 different data points were used to determine the characteristic equations.
+I used 21 MCP9701ALPGs (TO-92S) to acquire the data. 570 different data points were used to determine the characteristic equations.
 
 
 # Places to buy:
 
-LMT87LPG from DigiKey:  https://www.digikey.com/en/products/detail/texas-instruments/LMT87LPG/7427018
+MCP9701ALPG from DigiKey:  https://www.digikey.com/en/products/detail/texas-instruments/MCP9701ALPG/7427018
 
-LMT87LPG from Mouser:  https://www.mouser.com/ProductDetail/Texas-Instruments/LMT87LPG?qs=5aG0NVq1C4x9nVDnkGXLCQ%3D%3D
+MCP9701ALPG from Mouser:  https://www.mouser.com/ProductDetail/Texas-Instruments/MCP9701ALPG?qs=5aG0NVq1C4x9nVDnkGXLCQ%3D%3D
 
-LMT87LPG from Arrow: https://www.arrow.com/en/products/lmt87lpg/texas-instruments
+MCP9701ALPG from Arrow: https://www.arrow.com/en/products/MCP9701Alpg/texas-instruments
 
-LMT87LPG from Newark: https://www.newark.com/texas-instruments/lmt87lpg/temperature-sensor-0-4deg-c-to/dp/52AH7150
+MCP9701ALPG from Newark: https://www.newark.com/texas-instruments/MCP9701Alpg/temperature-sensor-0-4deg-c-to/dp/52AH7150
 
 
 # Observations:
 
-Please note that the value of VDD used to create "Table 3. LMT87 Transfer Table" in LMT87.pdf is not given in LMT87.pdf.
+Please note that the value of VDD used to create "Table 3. MCP9701A Transfer Table" in MCP9701A.pdf is not given in MCP9701A.pdf.
 
-The two LMT87LPG characteristic equations above get closest to the values in Table 3 of LMT87.pdf when VDD is as large as possible (VDD = +5.5V max.). I.e., the larger VDD is the better.
+The two MCP9701ALPG characteristic equations above get closest to the values in Table 3 of MCP9701A.pdf when VDD is as large as possible (VDD = +5.5V max.). I.e., the larger VDD is the better.
 
 
 # Another good analog temperature sensor:
