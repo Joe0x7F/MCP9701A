@@ -141,25 +141,23 @@ AND
 
 2.703V <= Vout <= 5.5V
 
-I used 21 MCP9701ALPGs (TO-92S) to acquire the data. 570 different data points were used to determine the characteristic equations.
+I used 21 MCP9701ALPGs (TO-92S) to acquire the data. 300 different data points were used to determine the characteristic equations.
 
 
 # Places to buy:
 
-MCP9701ALPG from DigiKey:  https://www.digikey.com/en/products/detail/texas-instruments/MCP9701ALPG/7427018
+MCP9701A-E/TO from DigiKey:  https://www.digikey.com/en/products/detail/microchip-technology/MCP9701A-E-TO/1212511
 
-MCP9701ALPG from Mouser:  https://www.mouser.com/ProductDetail/Texas-Instruments/MCP9701ALPG?qs=5aG0NVq1C4x9nVDnkGXLCQ%3D%3D
+MCP9701A-E/TO from Mouser:  https://www.mouser.com/ProductDetail/Microchip-Technology-Atmel/MCP9701A-E-TO?qs=RnzODY3cU8u0EUmxN333WQ%3D%3D
 
-MCP9701ALPG from Arrow: https://www.arrow.com/en/products/MCP9701Alpg/texas-instruments
+MCP9701A-E/TO from Arrow: https://www.arrow.com/en/products/mcp9701a-eto/microchip-technology
 
-MCP9701ALPG from Newark: https://www.newark.com/texas-instruments/MCP9701Alpg/temperature-sensor-0-4deg-c-to/dp/52AH7150
+MCP9701A-E/TO from Newark: https://www.newark.com/microchip/mcp9701a-e-to/temperature-sensor-1c-3-to-92/dp/17M0680
 
 
 # Observations:
 
-Please note that the value of VDD used to create "Table 3. MCP9701A Transfer Table" in MCP9701A.pdf is not given in MCP9701A.pdf.
-
-The two MCP9701ALPG characteristic equations above get closest to the values in Table 3 of MCP9701A.pdf when VDD is as large as possible (VDD = +5.5V max.). I.e., the larger VDD is the better.
+(intentionally left blank)
 
 
 # Another good analog temperature sensor:
