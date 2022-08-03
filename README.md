@@ -13,7 +13,7 @@ Main Microchip.com landing for MCP9701A: https://www.microchip.com/en-us/product
 
 This project was created to help enigneers, technicians, and hobbyist quicky get the MCP9701A low voltage temperature sensor working in their own projects.
 
-**The characteristic equations below should make it relatively easy and quick for you to design your own circuits around this device. (UNDER CONSTRUCTION!!!!)**
+**The characteristic equations below should make it relatively easy and quick for you to design your own circuits around this device.**
 
 
 # Basic circuit used to test and gather characteristic data:
@@ -21,13 +21,13 @@ This project was created to help enigneers, technicians, and hobbyist quicky get
 ![Simple Circuit](<mcp9701a-e_to.png>)
 
 
-# Characteristic equations (UNDER CONSTRUCTION!!!!):
+# Characteristic equations:
 
-**Characteristic Equation 1, (for 0 (uA) <= Iout <= 100 (uA)) MCP9701A is sourcing current:**
+**Characteristic Equation 1, FOR 0 (uA) <= Iout <= 100 (uA), MCP9701A is sourcing current:**
 
-**Vout = 0.006294635769978737 * Temperature_In_Fahrenheit + 0.0030547026226642416 * VDD + 0.011635267509341334 * Iout_In_uA - 0.0021226953491044116**
+**Vout  = 0.011526966933808041 * Temperature_In_Fahrenheit + 0.005141759459988668 * VDD - 0.00006455409191007096 * Iout_In_uA - 0.03950709236257986**
 
-The coefficient of determination (r-squared) for this Characteristic Equation 1 is 0.9999475739501221.
+The coefficient of determination (r-squared) for this Characteristic Equation 1 is 0.9794267220990659.
 
 
 **NOTE 1: Iout_In_uA must be entered into the characteristic equations in uA (1 microAmp = 1x10^-06 Amps). See examples below.**
@@ -41,20 +41,21 @@ Example 1a:
 
 If temperature is 77 degree Fahrenheit, VDD = 4.1, Iout = +25uA, then
 
-Vout = -0.007779402248826279 * (77) + 0.0009733172601552494 * (4.1) + 0.000028261925286710542 * (25) + 2.8933598263741938 = 2.29904300211337460309 Volts
+Vout  = 0.011526966933808041 * (77) + 0.005141759459988668 * (4.1) - 0.00006455409191007096 * (25) - 0.03950709236257986 = 0.8675367230288410618 Volts
 
-Vout ~ 2.299 Volts
+Vout ~ 0.8675 Volts
+
 
 Example 1b:
 
 If temperature is 77 degree Fahrenheit, VDD = 4.1, Iout = 0uA, then
 
-Vout = -0.007779402248826279 * (77) + 0.0009733172601552494 * (4.1) + 0.000028261925286710542 * (0) + 2.8933598263741938 = 2.29833645398120683954 Volts
+Vout  = 0.011526966933808041 * (77) + 0.005141759459988668 * (4.1) - 0.00006455409191007096 * (0) - 0.03950709236257986 = 0.8691505753265928358 Volts
 
-Vout ~ 2.298 Volts
+Vout ~ 0.8692 Volts
 
 
-The following form below of Characteristic Equation 1 may be easier for you if you know the DC Thevenin equivalent of the circuit your MCP9701A will drive:
+**The following form below of Characteristic Equation 1 may be easier for you if you know the DC Thevenin equivalent of the circuit your MCP9701A will drive:**
 
 Let Iout (in uA) = [(Vout - VL) / RL] * 1,000,000, then an equivalent alternative form of Characteristic Equation 1 is:
 
@@ -76,11 +77,11 @@ Vout = (-0.007779402248826279 * (77) + 0.0009733172601552494 * (4.1) - ((0.00002
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Characteristic Equation 2, (for -100 (uA) <= Iout <= 0 (uA)) MCP9701A is sinking current:**
+**Characteristic Equation 2, FOR -100 (uA) <= Iout <= 0 (uA), MCP9701A is sinking current:**
 
-**Vout = -0.0075608961627175765 * Temperature_In_Fahrenheit + 0.0009416100793021476 * VDD + -0.000018778567101973768 * Iout_In_uA + 2.87419156362495**
+**Vout  = 0.011066511626424604 * Temperature_In_Fahrenheit + 0.0064653234928165855 * VDD - 0.000009774365871666986 * Iout_In_uA - 0.004720069006290857**
 
-The coefficient of determination (r-squared) for Characteristic Equation 2 is 0.990896061949286.
+The coefficient of determination (r-squared) for Characteristic Equation 2 is 0.9801000691017826.
 
 
 **NOTE 1: Iout_In_uA must be entered into the characteristic equations in uA (1 microAmp = 1x10^-06 Amps).  See examples below.**
@@ -94,20 +95,21 @@ Example 2a:
 
 If temperature is 77 degree Fahrenheit, VDD = 4.1, Iout = -25uA, then
 
-Vout = -0.0075608961627175765 * (77) + 0.0009416100793021476 * (4.1) + -0.000018778567101973768 * (-25) + 2.87419156362495 = 2.29633262459838475886 Volts
+Vout  = 0.011066511626424604 * (77) + 0.0064653234928165855 * (4.1) - 0.000009774365871666986 * (-25) - 0.004720069006290857 = 0.8741535116957433262 Volts
 
-Vout ~ 2.296 Volts
+Vout ~ 0.8742 Volts
+
 
 Example 2b:
 
 If temperature is 77 degree Fahrenheit, VDD = 4.1, Iout = 0uA, then
 
-Vout = -0.0075608961627175765 * (77) + 0.0009416100793021476 * (4.1) + -0.000018778567101973768 * (0) + 2.87419156362495 = 2.29586316042083541466 Volts
+Vout  = 0.011066511626424604 * (77) + 0.0064653234928165855 * (4.1) - 0.000009774365871666986 * (0) - 0.004720069006290857 = 0.87390915254895165155 Volts
 
-Vout ~ 2.296 Volts
+Vout ~ 0.8739 Volts
 
 
-The following form below of Characteristic Equation 2 may be easier for you if you know the DC Thevenin equivalent of the circuit your MCP9701A will drive:
+**The following form below of Characteristic Equation 2 may be easier for you if you know the DC Thevenin equivalent of the circuit your MCP9701A will drive:**
 
 Let Iout (in uA) = [(Vout - VL) / RL] * 1,000,000, then an equivalent alternative form of Characteristic Equation 1 is:
 
