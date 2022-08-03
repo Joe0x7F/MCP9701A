@@ -57,20 +57,28 @@ Vout ~ 0.8692 Volts
 
 **The following form below of Characteristic Equation 1 may be easier for you if you know the DC Thevenin equivalent of the circuit your MCP9701A will drive:**
 
-Let Iout (in uA) = [(Vout - VL) / RL] * 1,000,000, then an equivalent alternative form of Characteristic Equation 1 is:
+
+Given this form of Characteristic Equation 1: Vout = a * Temperature_In_Fahrenheit + b * VDD + c * Iout_in_uA + e.
+
+Let Iout_in_uA = [(Vout - VL) / RL] * 1,000,000, then an equivalent alternative form of Characteristic Equation 1 is:
 
 Vout = [a * Temperature_In_Fahrenheit + b * VDD - ((c * 1,000,000 * VL)/RL) + e]/[1 - (c * 1,000,000/RL)]
 
-Vout = [-0.007779402248826279 * (Temperature_In_Fahrenheit) + 0.0009733172601552494 * (VDD) - ((0.000028261925286710542 * (1,000,000) * (VL)) / RL) + 2.8933598263741938]/[1 - (0.000028261925286710542 * (1,000,000) / RL)]
+Therefore,
+Vout = (0.011526966933808041 * Temperature_In_Fahrenheit + 0.005141759459988668 * VDD - ((-0.00006455409191007096 * 1,000,000 * VL) / RL) - 0.03950709236257986)/(1 - ((-0.00006455409191007096 * 1,000,000) / RL))
 
 
 Example 1c:
 
-If the ambient temperature is 77 degrees Fahrenheit, VDD = 4.1 Volts, Iout = +25uA, VL = 0, then
+Note:
+RL = (Vout-VL)*1,000,000/Iout_in_uA
 
-RL = ((2.29904300211337460309 - 0) / 25) * 1,000,000 = 91,961.7200845349841236 Ohms.
+So, if the ambient temperature is 77 degrees Fahrenheit, VDD = 4.1 Volts, Iout = +25uA, VL = 0, (from Example 1a) Vout = 0.8675367230288410618 Volts, then
 
-Vout = (-0.007779402248826279 * (77) + 0.0009733172601552494 * (4.1) - ((0.000028261925286710542 * 1,000,000*(0)) / 91,961.7200845349841236) + 2.8933598263741938) / (1 - (0.000028261925286710542 * 1,000,000 / 91,961.7200845349841236)) = 2.29904300211337460309 Volts
+RL = (Vout-VL)*1,000,000/Iout_in_uA = (0.8675367230288410618 - 0) * 1,000,000 / 25 = 34,701.468921153642472 Ohms.
+
+
+Vout = (0.011526966933808041 * 77 + 0.005141759459988668 * 4.1 - ((-0.00006455409191007096 * 1,000,000 * 0) / 34,701.468921153642472) - 0.03950709236257986)/(1 - ((-0.00006455409191007096 * 1,000,000) / 34,701.468921153642472)) = 0.8675367230288410618
 
 *Compare to result of Example 1a. They are the same.
 
