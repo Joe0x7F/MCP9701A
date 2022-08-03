@@ -39,7 +39,7 @@ The coefficient of determination (r-squared) for this Characteristic Equation 1 
 
 Example 1a:
 
-If temperature is 77 degree Fahrenheit, VDD = 4.1, Iout = +25uA, then
+If temperature is 77 degrees Fahrenheit, VDD = 4.1, Iout = +25uA, then
 
 Vout  = 0.011526966933808041 * (77) + 0.005141759459988668 * (4.1) - 0.00006455409191007096 * (25) - 0.03950709236257986 = 0.8675367230288410618 Volts
 
@@ -48,7 +48,7 @@ Vout ~ 0.8675 Volts
 
 Example 1b:
 
-If temperature is 77 degree Fahrenheit, VDD = 4.1, Iout = 0uA, then
+If temperature is 77 degrees Fahrenheit, VDD = 4.1, Iout = 0uA, then
 
 Vout  = 0.011526966933808041 * (77) + 0.005141759459988668 * (4.1) - 0.00006455409191007096 * (0) - 0.03950709236257986 = 0.8691505753265928358 Volts
 
@@ -101,7 +101,7 @@ The coefficient of determination (r-squared) for Characteristic Equation 2 is 0.
 
 Example 2a:
 
-If temperature is 77 degree Fahrenheit, VDD = 4.1, Iout = -25uA, then
+If temperature is 77 degrees Fahrenheit, VDD = 4.1, Iout = -25uA, then
 
 Vout  = 0.011066511626424604 * (77) + 0.0064653234928165855 * (4.1) - 0.000009774365871666986 * (-25) - 0.004720069006290857 = 0.8741535116957433262 Volts
 
@@ -110,7 +110,7 @@ Vout ~ 0.8742 Volts
 
 Example 2b:
 
-If temperature is 77 degree Fahrenheit, VDD = 4.1, Iout = 0uA, then
+If temperature is 77 degrees Fahrenheit, VDD = 4.1, Iout = 0uA, then
 
 Vout  = 0.011066511626424604 * (77) + 0.0064653234928165855 * (4.1) - 0.000009774365871666986 * (0) - 0.004720069006290857 = 0.87390915254895165155 Volts
 
@@ -119,20 +119,26 @@ Vout ~ 0.8739 Volts
 
 **The following form below of Characteristic Equation 2 may be easier for you if you know the DC Thevenin equivalent of the circuit your MCP9701A will drive:**
 
-Let Iout (in uA) = [(Vout - VL) / RL] * 1,000,000, then an equivalent alternative form of Characteristic Equation 1 is:
+Given this form of Characteristic Equation 2: Vout = a * Temperature_In_Fahrenheit + b * VDD + c * Iout_in_uA + e.
 
-Vout = [a * Temperature_In_Fahrenheit + b * VDD - ((c * 1,000,000 * VL) / RL) + e] / [1 - (c * 1,000,000 / RL)]
+Let Iout_in_uA = [(Vout - VL) / RL] * 1,000,000, then an equivalent alternative form of Characteristic Equation 2 is:
 
-Vout = [-0.0075608961627175765 * Temperature_In_Fahrenheit + 0.0009416100793021476 * VDD - ((-0.000018778567101973768 * 1,000,000 * VL) / RL) + 2.87419156362495] / [1 - (-0.000018778567101973768 * 1,000,000 / RL)]
+Vout = [a * Temperature_In_Fahrenheit + b * VDD - ((c * 1,000,000 * VL)/RL) + e]/[1 - (c * 1,000,000/RL)]
+
+Therefore,
+Vout = (0.011066511626424604 * Temperature_In_Fahrenheit + 0.0064653234928165855 * VDD - ((-0.000009774365871666986 * 1,000,000 * VL) / RL) - 0.004720069006290857)/(1 - ((-0.000009774365871666986 * 1,000,000) / RL))
 
 
 Example 2c:
 
-If the ambient temperature is 77 degrees Fahrenheit, VDD = 4.1 Volts, Iout = -25uA, VL = 4.1, then
+Note:
+RL = (Vout-VL)*1,000,000/Iout_in_uA
 
-RL = ((2.29633262459838475886 - (4.1)) / (-25)) * 1,000,000 = 72,146.6950160646096456 Ohms.
+So, if the ambient temperature is 77 degrees Fahrenheit, VDD = 4.1 Volts, Iout = -25uA, VL = 4.1, (from Example 2a) Vout = 0.8741535116957433262 Volts, then
 
-Vout = (-0.0075608961627175765 * (77) + 0.0009416100793021476 * (4.1) - ((-0.000018778567101973768 * 1,000,000 * (4.1)) / 72,146.6950160646096456) + 2.87419156362495) / (1 - (-0.000018778567101973768 * 1,000,000 / 72,146.6950160646096456)) = 2.29633262459838475886 Volts
+RL = (Vout-VL)*1,000,000/Iout_in_uA = (0.8741535116957433262 - 4.1) * 1,000,000 / (-25) = 129,033.859532170266952 Ohms.
+
+Vout = (0.011066511626424604 * 77 + 0.0064653234928165855 * 4.1 - ((-0.000009774365871666986 * 1,000,000 * 4.1) / 129,033.859532170266952) - 0.004720069006290857)/(1 - ((-0.000009774365871666986 * 1,000,000) / 129,033.859532170266952)) = 0.8741535116957433262 Volts
 
 *Compare to result of Example 2a. They are the same.
 
@@ -151,7 +157,7 @@ AND
 
 2.703V <= Vout <= 5.5V
 
-I used 21 MCP9701ALPGs (TO-92S) to acquire the data. 300 different data points were used to determine the characteristic equations.
+I used 21 MCP9701A-E/TOs to acquire the data. 300 different data points were used to determine the characteristic equations.
 
 
 # Places to buy:
@@ -167,7 +173,21 @@ MCP9701A-E/TO from Newark: https://www.newark.com/microchip/mcp9701a-e-to/temper
 
 # Observations:
 
-(intentionally left blank)
+When Iout = 0,
+
+Example 1b shows:
+If temperature is 77 degrees Fahrenheit, VDD = 4.1, Iout = 0uA, then
+Vout  = 0.8691505753265928358 Volts
+
+AND
+
+Example 2b shows:
+If temperature is 77 degrees Fahrenheit, VDD = 4.1, Iout = 0uA, then
+Vout  = 0.87390915254895165155 Volts
+
+A descrepency here is not surprising. I would use the average of these to predict Vout for when Iout = 0. Therefore,
+
+Vout (at Iout is 0) = (0.8691505753265928358 + 0.87390915254895165155) / 2 = 0.871529863937772243675 Volts when temperature is 77 degrees Fahrenheit, VDD = 4.1, Iout = 0uA.
 
 
 # Another good analog temperature sensor:
