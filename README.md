@@ -13,10 +13,10 @@ Main Microchip.com landing for MCP9701A: https://www.microchip.com/en-us/product
 
 This project was created to help enigneers, technicians, and hobbyist quicky get the MCP9701A low voltage temperature sensor working in their own projects.
 
-**The characteristic equations below should make it relatively easy and quick for you to design your own circuits around this device.**
+**The characteristic equations below should make it relatively easy and quick for you to design your own circuits around this device. (UNDER CONSTRUCTION!!!!)**
 
 
-# Basic circuit used to test and gather characteristic data:
+# Basic circuit used to test and gather characteristic data (UNDER CONSTRUCTION!!!!):
 
 ![Simple Circuit](<mcp9701a-e_to.png>)
 
@@ -25,9 +25,9 @@ This project was created to help enigneers, technicians, and hobbyist quicky get
 
 **Characteristic Equation 1, (for 0 (uA) <= Iout <= 100 (uA)) MCP9701A is sourcing current:**
 
-**Vout = -0.007779402248826279 * Temperature_In_Fahrenheit + 0.0009733172601552494 * VDD + 0.000028261925286710542 * Iout_In_uA + 2.8933598263741938**
+**Vout = 0.006294635769978737 * Temperature_In_Fahrenheit + 0.0030547026226642416 * VDD + 0.011635267509341334 * Iout_In_uA - 0.0021226953491044116**
 
-The coefficient of determination (r-squared) for this Characteristic Equation 1 is 0.9882776686812974.
+The coefficient of determination (r-squared) for this Characteristic Equation 1 is 0.9999475739501221.
 
 
 **NOTE 1: Iout_In_uA must be entered into the characteristic equations in uA (1 microAmp = 1x10^-06 Amps). See examples below.**
