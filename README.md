@@ -39,7 +39,7 @@ The coefficient of determination (r-squared) for this Characteristic Equation 1 
 
 Example 1a:
 
-If temperature is 77 degrees Fahrenheit, VDD = 4.1, Iout = +25uA, then
+If temperature is 77 degrees Fahrenheit, VDD = 4.1, Iout = +25uA (sourcing current), then
 
 Vout  = 0.011526966933808041 * (77) + 0.005141759459988668 * (4.1) - 0.00006455409191007096 * (25) - 0.03950709236257986 = 0.8675367230288410618 Volts
 
@@ -101,7 +101,7 @@ The coefficient of determination (r-squared) for Characteristic Equation 2 is 0.
 
 Example 2a:
 
-If temperature is 77 degrees Fahrenheit, VDD = 4.1, Iout = -25uA, then
+If temperature is 77 degrees Fahrenheit, VDD = 4.1, Iout = -25uA (sinking current), then
 
 Vout  = 0.011066511626424604 * (77) + 0.0064653234928165855 * (4.1) - 0.000009774365871666986 * (-25) - 0.004720069006290857 = 0.8741535116957433262 Volts
 
@@ -147,15 +147,15 @@ Vout = (0.011066511626424604 * 77 + 0.0064653234928165855 * 4.1 - ((-0.000009774
 
 Besides the limitations listed in the [manufacturer's datasheet](20001942G.pdf "20001942G.pdf"), below are the ranges used in my tests to derive the characteristic equations shown above.  I anticipate adding wider temperature ranges to my tests as time and ambient temperatures permit which in turn will produce tweaks to the characteristic equations. However, I expect the characteristic equations above to be good for any situation in or "near" the domain criterion listed below.
 
--49.6992481203007uA <= Iout <= 47.840462905559uA
+-94.6826051112943 uA <= Iout <= 88.9384468022884 uA
 
 AND
 
-75.6 degrees F <= Temperature_In_Fahrenheit <= 91.6 degrees F
+76.3 degrees F <= Temperature_In_Fahrenheit <= 91.6 degrees F
 
 AND
 
-2.703V <= Vout <= 5.5V
+3.1075 V <= Vout <= 5.497 V
 
 I used 21 MCP9701A-E/TOs to acquire the data. 300 different data points were used to determine the characteristic equations.
 
@@ -185,7 +185,7 @@ Example 2b shows:
 If temperature is 77 degrees Fahrenheit, VDD = 4.1, Iout = 0uA, then
 Vout  = 0.87390915254895165155 Volts
 
-A descrepency here is not surprising. I would use the average of these to predict Vout for when Iout = 0. Therefore,
+The discrepancy here is unsurprising. I would use the average of these to predict Vout for when Iout = 0. Therefore,
 
 Vout (at Iout is 0) = (0.8691505753265928358 + 0.87390915254895165155) / 2 = 0.871529863937772243675 Volts when temperature is 77 degrees Fahrenheit, VDD = 4.1, Iout = 0uA.
 
