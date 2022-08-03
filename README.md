@@ -65,7 +65,8 @@ Let Iout_in_uA = [(Vout - VL) / RL] * 1,000,000, then an equivalent alternative 
 Vout = [a * Temperature_In_Fahrenheit + b * VDD - ((c * 1,000,000 * VL)/RL) + e]/[1 - (c * 1,000,000/RL)]
 
 Therefore,
-Vout = (0.011526966933808041 * Temperature_In_Fahrenheit + 0.005141759459988668 * VDD - ((-0.00006455409191007096 * 1,000,000 * VL) / RL) - 0.03950709236257986)/(1 - ((-0.00006455409191007096 * 1,000,000) / RL))
+
+**Vout = (0.011526966933808041 * Temperature_In_Fahrenheit + 0.005141759459988668 * VDD - ((-0.00006455409191007096 * 1,000,000 * VL) / RL) - 0.03950709236257986)/(1 - ((-0.00006455409191007096 * 1,000,000) / RL))**
 
 
 Example 1c:
@@ -126,7 +127,8 @@ Let Iout_in_uA = [(Vout - VL) / RL] * 1,000,000, then an equivalent alternative 
 Vout = [a * Temperature_In_Fahrenheit + b * VDD - ((c * 1,000,000 * VL)/RL) + e]/[1 - (c * 1,000,000/RL)]
 
 Therefore,
-Vout = (0.011066511626424604 * Temperature_In_Fahrenheit + 0.0064653234928165855 * VDD - ((-0.000009774365871666986 * 1,000,000 * VL) / RL) - 0.004720069006290857)/(1 - ((-0.000009774365871666986 * 1,000,000) / RL))
+
+**Vout = (0.011066511626424604 * Temperature_In_Fahrenheit + 0.0064653234928165855 * VDD - ((-0.000009774365871666986 * 1,000,000 * VL) / RL) - 0.004720069006290857)/(1 - ((-0.000009774365871666986 * 1,000,000) / RL))**
 
 
 Example 2c:
