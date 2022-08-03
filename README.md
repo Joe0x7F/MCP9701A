@@ -7,7 +7,7 @@ Here is the datasheet for this device: https://ww1.microchip.com/downloads/en/De
 003a8010f2c872e9da725d6c69f76897 ee33498247825d49fb32e9772598d829319a2f86 20001942G.pdf
 
 
-Main Microchip.com landing for MCP9701A: https://www.microchip.com/en-us/product/MCP9701A
+Main Microchip.com landing for the MCP9701A: https://www.microchip.com/en-us/product/MCP9701A
 
 
 
