@@ -16,12 +16,12 @@ This project was created to help enigneers, technicians, and hobbyist quicky get
 **The characteristic equations below should make it relatively easy and quick for you to design your own circuits around this device. (UNDER CONSTRUCTION!!!!)**
 
 
-# Basic circuit used to test and gather characteristic data (UNDER CONSTRUCTION!!!!):
+# Basic circuit used to test and gather characteristic data:
 
 ![Simple Circuit](<mcp9701a-e_to.png>)
 
 
-# Characteristic equations:
+# Characteristic equations (UNDER CONSTRUCTION!!!!):
 
 **Characteristic Equation 1, (for 0 (uA) <= Iout <= 100 (uA)) MCP9701A is sourcing current:**
 
