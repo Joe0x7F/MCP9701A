@@ -10,7 +10,6 @@ Here is the datasheet for this device: https://ww1.microchip.com/downloads/en/De
 Main Microchip.com landing for the MCP9701A: https://www.microchip.com/en-us/product/MCP9701A
 
 
-
 This project was created to help enigneers, technicians, and hobbyist quicky get the MCP9701A low voltage temperature sensor working in their own projects.
 
 **The characteristic equations below should make it relatively easy and quick for you to design your own circuits around this device.**
@@ -79,7 +78,7 @@ So, if the ambient temperature is 77 degrees Fahrenheit, VDD = 4.1 Volts, Iout =
 RL = (Vout-VL)*1,000,000/Iout_in_uA = (0.8675367230288410618 - 0) * 1,000,000 / 25 = 34,701.468921153642472 Ohms.
 
 
-Vout = (0.011526966933808041 * 77 + 0.005141759459988668 * 4.1 - ((-0.00006455409191007096 * 1,000,000 * 0) / 34,701.468921153642472) - 0.03950709236257986)/(1 - ((-0.00006455409191007096 * 1,000,000) / 34,701.468921153642472)) = 0.8675367230288410618
+Vout = (0.011526966933808041 * 77 + 0.005141759459988668 * 4.1 - ((-0.00006455409191007096 * 1,000,000 * 0) / 34,701.468921153642472) - 0.03950709236257986)/(1 - ((-0.00006455409191007096 * 1,000,000) / 34,701.468921153642472)) = 0.8675367230288410618 Volts
 
 *Compare to result of Example 1a. They are the same.
 
